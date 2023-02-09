@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> tạo biểu mẫu cho trang </title>
+
+  <style>
+    .options {
+      display: flex;
+    }
+
+    .option {
+      width: 120px;
+    }
+    /*.option > input {*/
+    /*    width: 60px;*/
+    /*}*/
+
+  </style>
+</head>
+<body>
+
+<div style="width: 540px">
+  <fieldset>
+    <div style="background-color: red; text-align: center" >
+      <h2 style="color: white" > SỞ THÍCH CỦA BẠN  </h2>
+    </div>
+    <span style="color: blue"> Họ và tên  </span>
+    <input type="text" name="name" id="name" placeholder="Nhập tên vào đây">
+    <br>
+    <label style="color: blue"> Email </label>
+    <input type="text" name="email" placeholder=" Nhập email vào đây" >
+    <br>
+
+
+    <div style="display: flex">
+      <div style="width: 80px">
+        <label style="color: blue"> Sở thích </label>
+      </div>
+      <div style="color: red">
+        <div class="options">
+          <div class="option">
+            <input type="checkbox"> Thể thao
+          </div>
+          <div class="option">
+            <input type="checkbox"> Lướt web
+          </div>
+          <div class="option">
+            <input type="checkbox"> Du lịch
+          </div>
+        </div>
+        <div class="options">
+          <div class="option">
+            <input type="checkbox"> Âm nhạc
+          </div>
+          <div class="option">
+            <input type="checkbox"> Chơi Game
+          </div>
+          <div class="option">
+            <input type="checkbox"> Đọc sách
+          </div>
+
+        </div>
+        <div class="option">
+          <input type="checkbox"> Điện ảnh
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align: center">
+      <input type="submit" value=" Gởi thông tin" style="background-color: darkgray">
+      <input type="submit" value="Nhập lại" style="background-color: darkgray">
+    </div>
+  </fieldset>
+</div>
+<br> <br> <br   >
+
+
+<div  style="background-color: yellow ; width: 600px ">
+  <fieldset>
+    <h2 style="background-color: lightskyblue ; color: blue"> ĐĂNG KÍ HỌC VIÊN  </h2>
+    <span style="color: blue"> Họ và tên </span>
+    <input type="text " name="name" id=" name " placeholder="Nhập họ và tên ">
+    <br>
+    <p>
+      <span style="color: blue"> Ngày sinh  </span>
+      <input type="text" name=" ngày sinh" placeholder=" Nhập ngày sinh vào đây"> </p>
+    <p>
+      <label style="color: blue"> Giới tính </label>
+      <input type="radio" > Nam
+      <input type="radio" > Nữ </p>
+    <p>
+      <span style="color: blue"> Địa chỉ  </span>
+      <input type="text" placeholder=" Nhập địa chỉ vào đây  ">
+    </p>
+    <p>
+      <span style="color: blue"> Lớp </span>
+      <input type="number" placeholder="--Chọn lớp--" value="--Chọn lớp--">
+    </p>
+    <p>
+      <span style="color: blue"> Email </span>
+      <input type="text" placeholder=" Nhập Email vào đây">
+    </p>
+    <p>
+      <span style="color: blue"> Điện thoại  </span>
+      <input type="text" placeholder=" Nhập số điện thoại ">
+    </p>
+    <div> <input type="submit" value=" Đăng ký  "> <input type="submit" value=" Đăng Nhập"  > </div>
+  </fieldset>
+
+</div>
+
+
+
+
+</body>
+</html>
