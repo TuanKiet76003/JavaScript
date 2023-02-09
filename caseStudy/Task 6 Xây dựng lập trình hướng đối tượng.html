@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Xây dựng lập trình hướng đối tượng </title>
+</head>
+<body>
+<h1 style="text-align: center ; color: red"> Xây dựng hệ thống quản lý học viên CODEGYM </h1>
+<fieldset>
+  <button onclick="NewStudent()">
+    Thêm mới học viên
+  </button>
+  <button onclick="repair()">
+    Sửa thông tin học viên
+  </button>
+  <button onclick="Reset()">
+    Xóa học viên
+  </button>
+  <br> <br>
+  <table border="1" style="width: 50% ; text-align: center; margin-left: 300px" id="table">
+    <tr>
+      <th>
+        Mã học viên
+      </th>
+      <th>
+          Tên
+      </th>
+      <th>
+        Lớp
+      </th>
+      <th>
+        Email
+      </th>
+      <th>
+        Ngày sinh
+      </th>
+      <th>
+        Module
+      </th>
+    </tr>
+    <tr>
+      <td class="maSV1"> </td>
+      <td class="Name1"> </td>
+      <td class="Date1" > </td>
+      <td class="Email"> </td>
+      <td class="DOB1"> </td>
+      <td class="Module1"> </td>
+    </tr>
+    <tr>
+      <td class="maSV1"> </td>
+      <td class="Name1"> </td>
+      <td class="Date1" > </td>
+      <td class="Email"> </td>
+      <td class="DOB1"> </td>
+      <td class="Module1"> </td>
+    </tr>
+    <tr>
+      <td class="maSV1"> </td>
+      <td class="Name1"> </td>
+      <td class="Date1" > </td>
+      <td class="Email"> </td>
+      <td class="DOB1"> </td>
+      <td class="Module1"> </td>
+    </tr>
+
+
+  </table>
+</fieldset>
+</body>
+<script>
+  class Student{
+    constructor(mhv,name,date,email, dateOfBirth ,module) {
+      this.mhv = mhv;
+      this.name = name;
+      this.date = date;
+      this.email = email;
+      this.dateOfBirth = dateOfBirth;
+      this.module = module;
+    }
+    getMhv(){
+      return this.mhv;
+    }
+    getName(){
+      return this.name;
+    }
+    getDate(){
+      return this.date;
+    }
+    getEmail(){
+      return this.email;
+    }
+    getDateOfBirth(){
+      return this.dateOfBirth;
+    }
+    getModule(){
+      return this.module;
+    }
+    setMhv(newMhv){
+      this.mhv = newMhv
+    }
+    setName(newName){
+      this.name = newName;
+    }
+    setDate(newDate){
+      this.date = newDate;
+    }
+    setEmail(newEmail){
+      this.email = newEmail;
+    }
+    setDateOfBirth(newDateOfBirth){
+      this.dateOfBirth = newDateOfBirth;
+    }
+    setModule(newModule){
+      this.module = newModule;
+    }
+  }
+  let result = new Student('HV-0001','Nguyễn Văn A','C1022G1','nguyenvana@gmail.com','01/01/2004','Modlue1');
+  let arr = [
+    new Student('HV-0001','Nguyễn Văn A','C1022G1','nguyenvana@gmail.com','01/01/2004','Modlue1'),
+    new Student('HV-0002','Nguyễn Văn B','C1122G1','nguyenvanb@gmail.com','02/02/2004','Modlue2'),
+    new Student('HV-0003','Nguyễn Thị C','C1222G1','nguyenthiC@gmail.com','03/03/2004','Modlue4')
+  ]
+  a=document.getElementsByClassName("maSV1");
+  b=document.getElementsByClassName("Name1");
+  c=document.getElementsByClassName("Date1");
+  d=document.getElementsByClassName("Email");
+  e=document.getElementsByClassName("DOB1");
+  f=document.getElementsByClassName("Module1");
+
+  for(let i = 0; i < arr.length; i++){
+    a[i].innerText='' + arr[i].getMhv();
+    b[i].innerText='' + arr[i].getName();
+    c[i].innerText='' + arr[i].getDate();
+    d[i].innerText='' + arr[i].getEmail();
+    e[i].innerText='' + arr[i].getDateOfBirth();
+    f[i].innerText='' + arr[i].getModule();
+  }
+
+  function NewStudent() {
+    result.setMhv(prompt('Nhập mã học viên mới'));
+    result.setName(prompt('Nhập họ và tên học viên mới'));
+    result.setDate(prompt('Nhập lớp của học viên mới'));
+    result.setEmail(prompt('Nhập Email học viên mới'));
+    result.setDateOfBirth(prompt('Nhập ngày tháng năm sinh học viên mới (0/0/0)'));
+    result.setModule(prompt('Nhập module của học viên mới'));
+    let myNodelist = document.createElement('tr');
+    let gg = [result.getMhv(),result.getName(),result.getDate(),result.getEmail(),result.getDateOfBirth(),result.getModule()];
+    arr.push(new Student(gg[0],gg[1],gg[2],gg[3],gg[4],gg[5]));
+    for (let i= 0; i < 6; i++) {
+      let span = document.createElement("td");
+      let txt = document.createTextNode(gg[i]);
+      span.className = "close";
+      span.appendChild(txt);
+      myNodelist.appendChild(span);
+    }
+    document.getElementById("table").appendChild(myNodelist);
+  }
+
+  function repair(){
+    let arr2 = arr.map(x=>x.mhv);
+    let Repair = prompt('Nhập mã số học viên muốn chỉnh sửa ');
+    if (arr2.indexOf(Repair) !== -1){
+      result.setMhv(prompt('Nhập mã học viên mới'));
+      result.setName(prompt('Nhập họ và tên học viên mới'));
+      result.setDate(prompt('Nhập lớp của học viên mới'));
+      result.setEmail(prompt('Nhập Email học viên mới'));
+      result.setDateOfBirth(prompt('Nhập ngày tháng năm sinh học viên mới (0/0/0)'));
+      result.setModule(prompt('Nhập module của học viên mới'));
+      let parent = document.getElementById('table');
+      // câu lệnh tạo mới
+      let myNodelist = document.createElement('tr');
+      let gg = [result.getMhv(),result.getName(),result.getDate(),result.getEmail(),result.getDateOfBirth(),result.getModule()];
+      for (let i= 0; i < 6; i++) {
+        let span = document.createElement("td");
+        let txt = document.createTextNode(gg[i]);
+        span.className = "close";
+        span.appendChild(txt);
+        myNodelist.appendChild(span);
+      }
+      parent.appendChild(myNodelist);
+      //câu lệnh xóa
+      let k = document.getElementsByTagName('tr');
+      k[arr2.indexOf(Repair)+1].remove();
+    }else {
+      alert('Mã học viên không tồn tại');
+    }
+  }
+
+function Reset(){
+  let arr3 = arr.map(x=>x.mhv);
+    let Delete = prompt('Nhập mã học viên muốn xóa ');
+    if (arr3.indexOf(Delete) !== -1){
+      let k = document.getElementsByTagName('tr');
+      k[arr3.indexOf(Delete)+1].remove();
+    }
+}
+
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> hàm liệt kê các số nguyên tố trong mảng 2 chiều, đếm các số nguyên tố có trong mảng đó. </title>
+</head>
+<body>
+<script>
+    let arr=[[]];
+    let n = +prompt("Nhập số dòng :");
+    let m = +prompt("Nhập số cột :");
+    for (let i = 0; i <n ; i++) {
+        arr[i]=[];
+        for (let j = 0; j <m; j++) {
+            arr[i][j]= +prompt("Nhập giá trị dòng của " + i +" Cột " + j);
+        }
+    }
+    function checkPrimes(number) {
+        let count=0;
+        for (let i = 1 ;i <=number ; i++) {
+            if(number%i===0){
+                count++;
+            }
+        }
+        return (count===2);
+    }
+    document.write("- số  nguyên tố trong mảng vừa nhập là : ");
+    let count=0;
+    for (let i = 0; i < n ; i++) {
+        for (let j = 0; j < m ; j++) {
+            if(checkPrimes(arr[i][j])){
+                document.write(arr[i][j]+" ")
+                count++;
+            }
+        }
+    }
+    document.write("<br>")
+    document.write("- Tổng số nguyên tố có trong mảng đó là : "+count);
+</script>
+</body>
+</html>

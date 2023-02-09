@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tìm ra các phần tử khác nhau trong mảng</title>
+</head>
+<body>
+<script>
+
+    function doSth(a,b){
+        let c = [];
+        for (let i = 0; i < b.length; i++) {
+            if (!a.includes(b[i])){
+                c.push(b[i])
+            }
+        }
+        return c ;
+    }
+
+    let a = [];
+    let c = +prompt('Nhập số phần tử của mảng số nguyên a');
+    for (let i=0;i<c;i++){
+        a[i]= +prompt('Nhập giá trị của phần tử thứ ' + i + 'trong mảng a' );
+    }
+    document.write('Mảng số nguyên a là a = '+ a + '<br>' );
+    let b = [];
+    let d = +prompt('Nhập số lượng phần tử của số nguyên b');
+    for (let j=0;j<d;j++){
+        b[j]= +prompt('Nhập giá trị của phần tử thứ' + j + 'trong mảng b');
+    }
+    document.write('Mảng số nguyên b là b = '+ b + '<br>' );
+
+    result = doSth(a,b);
+    document.write('Giá trị của phần tử không có trong mảng là a : ' + result);
+
+
+</script>
+</body>
+</html>

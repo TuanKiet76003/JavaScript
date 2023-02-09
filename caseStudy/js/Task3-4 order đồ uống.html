@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tạo một phần mềm để người dùng oder đồ uống     </title>
+    <script src="js.js"></script>
+</head>
+<body>
+<form id="myform" style="width: 70%">
+<h1 style="text-align: center ;color: orangered" > Quán giải khát CodeGym  </h1>
+<div>
+    <h2 style="text-align: center;color: orange"> Menu quán </h2>
+    <p>
+      <label>
+         1.<input type="checkbox"> Cafe
+      </label> <br> <br>
+        <label>
+            <input id="number1" type="number" placeholder="Nhập số lượng đồ uống " oninput="checkOne()"> <br> <br>
+        </label>
+        <b id="price1" > </b>
+        <br>
+    </p>
+    <p>
+        <label>
+            2.<input type="checkbox"> Cam vắt
+        </label> <br> <br>
+        <label>
+            <input id="number2" type="number" placeholder="Nhập số lượng đồ uống " oninput="checkTwo()"> <br> <br>
+        </label>
+        <b id="price2" > </b> <br> <br>
+
+    </p>
+    <p>
+        <label>
+            3.<input type="checkbox"> Nước ép cà rốt
+            <br> <br>
+            <input id="number3" type="number" placeholder="Nhập số lượng đồ uống " oninput="checkOne()"> <br> <br>
+        </label>
+        <b id="price3" > </b>
+    </p>
+    <p>
+        <label>
+            4.<input type="checkbox"> Nước ép cà chua
+            <br> <br>
+            <input id="number4" type="number" placeholder="Nhập số lượng đồ uống " oninput="checkOne()"> <br> <br>
+        </label>
+        <b id="price4" > </b>
+    </p>
+    <p>
+        <label>
+            5.<input type="checkbox"> Nước lọc
+            <br> <br>
+            <input id="number5" type="number" placeholder="Nhập số lượng đồ uống " oninput="checkThree()"> <br> <br>
+        </label>
+        <b id="price5" > </b>
+    </p>
+    <p>
+        <label>
+            6.<input type="checkbox"> Nước dừa
+            <br> <br>
+            <input id="number6" type="number" placeholder="Nhập số lượng đồ uống " oninput="checkTwo()"> <br> <br>
+        </label>
+        <b id="price6" > </b>
+    </p>
+</div>
+<div>
+    <p>
+        <label>
+            <button type="button" onclick="checkFour()"> Thành tiền </button>
+        </label> <br>
+    <b id="result">  </b>
+    </p>
+</div>
+    <div>
+        <button  onclick="Reset()" > Thoát khỏi  </button>
+    </div>
+</form>
+</body>
+</html>

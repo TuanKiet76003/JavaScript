@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hàm tính các số chẵn trong ma trận </title>
+</head>
+<body>
+<script>
+    let a = [];
+    let c = +prompt('Nhập số phần tử của mảng số nguyên a');
+    for (let i=0;i<c;i++){
+        a[i]= +prompt('Nhập giá trị của phần tử thứ ' + i + 'trong mảng a' );
+    }
+    document.write('Mảng số nguyên a là a = '+ a + '<br>' );
+    let b = [];
+    let d = +prompt('Nhập số lượng phần tử của số nguyên b');
+    for (let j=0;j<d;j++){
+        b[j]= +prompt('Nhập giá trị của phần tử thứ' + j + 'trong mảng b');
+    }
+    document.write('Mảng số nguyên b là b = '+ b + '<br>' );
+function calculate(a,b){
+    let sum = 0;
+    let arrynew = [];
+    for (let i = 0; i < a.length; i++) {
+        for (let j = i; j < b.length; j++) {
+            if (a[i]%2 ===0 && b[j]%2 ===0){
+               sum = a[i]*b[j]
+            }
+        }
+    }
+    arrynew.push(sum);
+    return arrynew ;
+}
+    let result = calculate(a,b);
+    document.write( "Tổng giá trị của các số chẵn là" + result);
+</script>
+</body>
+</html>

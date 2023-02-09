@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=[[]];
+    let n = +prompt("Nhập số dòng :");
+    let m = +prompt("Nhập số cột :");
+    for (let i = 0; i < n ; i++) {
+        arr[i]=[];
+        for (let j = 0; j < m ; j++) {
+            arr[i][j]= +prompt("Nhập giá trị dòng của " + i +" Cột " + j);
+        }
+    }
+    let max = arr[0][0];
+    let min = arr[0][0];
+    for (let i = 0 ;i < n ; i++) {
+        for (let j = 0 ; j < m ; j++) {
+            if (arr[i][j]>max){
+                max= arr[i][j];
+            }else {
+                min = arr[i][j];
+            }
+        }
+    }
+    document.write("Giá trị lớn nhất trong mảng là :" + max);
+    document.write("<br>");
+    document.write("Giá trị nhỏ nhất trong mảng là :" + min);
+</script>
+</body>
+</html>

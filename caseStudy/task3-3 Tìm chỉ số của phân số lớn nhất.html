@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tìm chỉ số của phân số lớn nhất </title>
+</head>
+<body>
+  <script>
+    function doSth(a,b){
+      let C = [];
+      for (let i = 0; i < a.length ; i++) {
+            C[i] = (a[i] / b[i]);
+        }
+      let max = C [0]
+      for (let i = 0; i < C.length; i++) {
+        if (C[i]>max){
+          max = C[i];
+        }
+      }return max;
+    }
+    let a = [];
+    let c = +prompt('Nhập số phần tử của mảng số nguyên a');
+    for (let i=0;i<c;i++){
+      a[i]= +prompt('Nhập giá trị của phần tử thứ ' + i + 'trong mảng a' );
+    }
+    document.write('Mảng số nguyên a là a = '+ a + '<br>' );
+    let b = [];
+    let d = +prompt('Nhập số lượng phần tử của số nguyên b');
+    for (let j=0;j<d;j++){
+      b[j]= +prompt('Nhập giá trị của phần tử thứ' + j + 'trong mảng b');
+    }
+    document.write('Mảng số nguyên b là b = '+ b + '<br>' );
+
+result = doSth(a,b);
+document.write('Phân số lớn nhất trong mảng là : =' + result);
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tính lương nhân viên  </title>
+</head>
+<body>
+<p>
+    <label>
+        <input id="Wage" type="text" placeholder="Nhập lương nhân viên">
+        <button onclick="calculate()" > Xem số lương bị trừ và lương nhận được là  </button>
+    </label>
+</p>
+<p id="result"> Mức lương của nhân viên là :  </p>
+
+<p id="thunhap">   </p>
+<script>
+    function calculate(){
+        let wage = document.getElementById('Wage').value
+        if (wage < 7000000){
+            document.getElementById('result').innerHTML ='Thuế là 5% và số lương bị trừ là :' +  (wage * 5)/100  ;
+            document.getElementById('thunhap').innerHTML = 'Số lương nhận được là :' + (wage - (wage*5)/100);
+        }else if ( wage >=7000000 && wage < 15000000){
+            document.getElementById('result').innerHTML = 'Thuế là 10% và số lương bị trừ là :' + (wage * 10)/100 ;
+            document.getElementById('thunhap').innerHTML = 'Số lương nhận được là :' + (wage - (wage*10)/100);
+        }else if (wage >= 15000000 ){
+            document.getElementById('result').innerHTML = "Thuế là 20% và số lương bị trừ là : " +  (wage * 20)/100 ;
+            document.getElementById('thunhap').innerHTML = 'Số lương nhận được là :' + (wage - (wage*20)/100);
+        }
+    }
+</script>
+</body>
+</html>

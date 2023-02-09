@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tìm k tự chung giữa 2 xâu </title>
+</head>
+<body>
+<script>
+  let a = prompt('Nhập chuỗi S1');
+  let b = prompt('Nhập chuỗi S2');
+  function doSth(a,b){
+      const arry1 = a.split('');
+      const arry2 = b.split('');
+      let c = {};
+      for (let i = 0; i < arry2.length; i++) {
+          const index = arry1.indexOf(arry2[i]);
+          if (index >= 0){
+              if (c[arry2[i]]){
+                  c[arry2[i]] += 1;
+              }else {
+                  c[arry2[i]] = 1;
+              }
+              arry1.splice(index, 1);
+          }
+      }
+      let  sum = 0;
+      let str = "";
+      for (let k of Object.keys(c)){
+          str += c[k] + " kí tự " + k   ;
+          sum+= c[k]
+      }
+  document.write("Có " + sum + " kí tự chung :" + str)
+  }
+  doSth(a,b);
+</script>
+</body>
+</html>

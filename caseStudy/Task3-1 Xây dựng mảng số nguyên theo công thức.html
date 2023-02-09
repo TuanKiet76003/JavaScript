@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Xây dựng mảng số nguyên theo công thức mới đã cho </title>
+</head>
+<body>
+<script>
+  let a = [];
+  let c =  +prompt('Nhập độ dài của mảng');
+  for (let i=0;i<c;i++){
+      a[i] = +prompt('Nhập số phần tử thứ ' + i +' của mảng');
+  }
+  document.write('mảng đầu tiên là' + a + '<br>')
+      let b = [];
+      for (let n=0;n<a.length;n++){
+          b.push(0);
+          for (let j=0;j<=n;j++){
+              b[n] += a[j];
+          }
+      }
+      document.write('mảng số chuyển đổi là '+ b)
+
+
+</script>
+</body>
+</html>

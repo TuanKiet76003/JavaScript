@@ -1,0 +1,29 @@
+#divnho{
+    width: 100%;
+    display: flex;
+}
+
+#tieuDe{
+    flex: 1;
+    text-align: center;
+    line-height: 150px;
+}
+#hinhanh{
+    height: 150px;
+}
+
+hr {
+    display: block;
+    border-style: inset;
+    border-width: 10px;
+}
+#divlon{
+    width: 30%;
+    border-right: solid 1px;
+}
+#divcuoi{
+    width: 100%;
+    height: 100vh;
+    background-color: darkgrey;
+    color: darkgrey;
+}

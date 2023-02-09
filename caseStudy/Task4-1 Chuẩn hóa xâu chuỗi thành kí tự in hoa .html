@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<body>
+<script>
+ function doSthing(str){
+     let string = str.toUpperCase().split('');
+     for (let i = 0; i < string.length; i++) {
+       string[i] = string[i].charAt(0).toUpperCase() + string[i].substring(1);
+     }
+     return string.join('') ;
+ }
+ result = doSthing(prompt('Nhập chuỗi cần in hoa các chữ cái đầu tiên'));
+ document.write(result);
+</script>
+</body>
+</html>

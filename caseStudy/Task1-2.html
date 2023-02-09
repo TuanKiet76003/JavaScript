@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra kí tự</title>
+</head>
+<body>
+<script>
+  let vowel = ["o","u","i","a","e",'O', 'U', 'I', 'A', 'E']
+  let consonant =[prompt("Nhập vào kí tự bạn muốn kiểm tra :")]
+  for (let i = 0; i < vowel.length; i++) {
+    if (vowel[i].includes(consonant)) {
+      document.write('Kí tự ' + consonant + ' là nguyên âm' )
+    }
+  }
+</script>
+</body>
+</html>
