@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<p onclick="wellcome()"> Click Me</p>-->
+<!--<label>  </label>-->
+<!--<label> Nhập một số bất kì bạn muốn bình phương =  <input id="input" type="text" oninput="calculate()"> Is : <span id="result" >  </span> </label>-->
+<script>
+  <!-- Demo về hàm -->
+  // function sum(a,b){
+  //   return a + b ;
+  // }
+  // let a = 5;
+  // let b = 4;
+  // let  result = sum(a,b);
+  // document.write(result);
+
+  // function square (number) {
+  //     return number * number ;
+  // }
+  // let square2 = square(2);
+  // document.write("Bình phương của 2 là  = " + square2 + "<br>");
+  // let square3 = square(3);
+  // document.write("Bình phương của 3 là  = " + square3 + "<br>");
+  // let square4 = square(4);
+  // document.write("Bình phương của 4 là  = " + square4 + "<br>");
+
+// function calculate(){
+//       let input = document.getElementById('input').value;
+//       let result = square(input);
+//       document.getElementById('result').innerHTML = result ;
+//
+// }
+
+
+  // Hiển thị các số từ 1 -> 10 bỏ qua số 5
+  // for (let i = 1; i <=10 ; i++) {
+  //     if(i === 5){
+  //         break;
+  //     }
+  //     document.write(i + "<br>");
+  //     // if(i === 5){
+  //     //     continue;
+  //     // }
+  // }
+// -----------------------------
+  // Cho người dùng nhập vào 1 số.
+  // Nếu số đó lớn hơn 50 thì bắt nhập lại.
+  // Còn bé hơn hoặc bằng 50 thì hiện OK
+  // While || do - while.
+
+  // let number;
+  // do {
+  //     number = +prompt("Nhập số vào đây: ");
+  //     if (number > 50) {
+  //         alert("Vui lòng nhập lại số bé hơn 50");
+  //     } else {
+  //         alert("OK");
+  //         break;
+  //     }
+  // } while (true);
+  // -----------------------
+  // Hiển thị các con số chia hết cho 2 từ 1 -> 50
+  // fori + tab
+  // for (let i = 1; i < 50; i++) {
+  //     document.write(i + "<br>");
+  // }
+  //
+  // for (let i = 1; i < 50; i++) {
+  //     if (i % 2 === 0) {
+  //         document.write(i + "<br>");
+  //     }
+  // }
+// ----------------------------
+  // for (let i = 50; i > 1; i -= 2) {
+  //     document.write(i + "<br>");
+  // }
+  // Cho người dùng nhập vào 1 số.
+  // xác định số nhập vào có phải
+  // số chẵn.
+
+  // // function isEvenNumber(number) {
+  // //     if(number % 2 === 0){
+  // //         document.write(number + " là số chẵn");
+  // //     }else {
+  // //         document.write(number + " là số lẻ");
+  // //     }
+  // // }
+  //
+  // isEvenNumber(2);
+  // isEvenNumber(3);
+
+  //
+ //  let arry = +prompt('Nhập số lượng phần tử ');
+ //  let arr2 = [];
+ //  let num  = false ;
+ //  for (let i = 0; i < arry; i++) {
+ //      arr2[i] = +prompt('Nhập số phần tử thứ' + i);
+ //  }
+ //  function isNumber(arr){
+ //      for (let i = 0; i < arr.length; i++) {
+ //          if (arr[i] % 2 === 1) {
+ //              document.write('mảng có số lẻ là ' + arr[i] + '<br>');
+ //              num = true;
+ //          }
+ //      }
+ //      if (!num){
+ //          alert('F5 và nhập lại')
+ //      }
+ //  }
+ //   isNumber(arr2);
+ // // -----------------------------------
+  /*Viết hàm nhận vào 1 mảng
+    * Hàm trả về tổng giá trị các phần tử trong mảng được truyền vào*/
+
+  // let arrNumber = [4, 1, 2, 5, 7];
+  // let arrNumber2 = [4, 1, 3, 5, 7];
+  //
+  // function totalElementInArray(arr) {
+  //     let sum = 0;
+  //     for (let i = 0; i < arr.length; i++) {
+  //         sum += arr[i];
+  //
+  //     }
+  //     document.write(sum + "<br>");
+  //     // return sum;
+  // }
+  // totalElementInArray(arrNumber);
+  // totalElementInArray(arrNumber2);
+  // document.write(result);
+  // // let result =
+  // // let result2 = totalElementInArray(arrNumber2);
+  // // document.write(result + "<br>");
+  // // document.write(result2 + "<br>");
+// -----------------------------------
+//   function doSth(number) {
+//       if (number === 2) {
+//           return 2;
+//       }
+//       return number * doSth(number - 1);
+//   }
+//   // Số 5 : -> doSth(5) return 5 * doSth(4)
+//   // So 4: -> doSth (4) return 4 * doSth(3)
+//   // So 3: -> doSth(3) return 3 * doSth(2)
+//   // So 2: -> doSth(2) return 2
+//   // 5 * 4 * 3 * 2 => 120
+//   let result = doSth(5);
+//   document.write(result)
+//   ----------------------------------
+  
+</script>
+</body>
+</html>
