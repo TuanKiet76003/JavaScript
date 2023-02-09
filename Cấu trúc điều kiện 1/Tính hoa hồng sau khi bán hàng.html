@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Luyện tập cấu trúc điều kiện </title>
+</head>
+<body>
+<span> Hoa Hồng nhận được là  </span>
+<p id="HH"> </p>
+<script>
+    let a =+prompt("Doanh số bán hàng tháng ");
+    if (a>=15) {
+        document.getElementById("HH").innerHTML= a*5/100 ;
+    }else if (a >= 10 && a <15){
+        document.getElementById("HH").innerHTML= a*3/100 ;
+    }else (a < 10) ; {
+        document.getElementById("HH").innerHTML= a*2/100 ;
+    }
+
+</script>
+</body>
+</html>
