@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p id="mang1" > </p>
+<script>
+  let arry = [];
+  let n = +prompt('Nhập số lượng phần tử vào mảng');
+  for ( let i=0;i<n;i++){
+    arry[i]= +prompt('Nhập giá trị phần tử vào '+i);
+    arry.sort();
+    arry.reverse();
+    document.getElementById('mang1').innerHTML = '' + arry;
+  }
+</script>
+</body>
+</html>

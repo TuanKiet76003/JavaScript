@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị hết số nguyên</title>
+</head>
+<body>
+<script>
+    let numbers = [1,3,5,7,9,2,4,6,8,10];
+    let max = numbers[0];
+    let sum = 0
+    for (const a of numbers){
+        sum += a ;
+    }
+    let avg = sum / numbers.length ;
+    document.write('giá trị trung bình là = ' + avg + '<br>');
+    for ( let i=0;i< numbers.length;i++){
+        if (numbers[i]>=max){
+            max = numbers[i];
+        }
+    }
+    document.write('giá trị lớn nhất là = '+ max);
+</script>
+</body>
+</html>

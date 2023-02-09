@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tạo và thao tác với mảng     </title>
+</head>
+<body>
+ <h2> Sample Screen: </h2>
+<label>
+    <input type="text" name="numbers" placeholder="Nhập số vào đây" id="giatri1" >
+    <input type="button" value="Add" id="addnumber" onclick="giatri2()" >
+    <input type="button" value="Display" id="deletenumber" onclick="giatri3()" >
+    <label id="result" >  </label>
+</label>
+</body>
+<script>
+    let x = 0;
+    let array = Array();
+    function giatri2() {
+        array[x] = document.getElementById("giatri2");
+        alert("Element = " + array[x] + "Added at index" + x );
+        x++
+        document.getElementById("giatri1").value = "";
+    }
+    function giatri3(){
+        let e = "<hr/>";
+        for (let i=0;i<array.length;i++){
+            e += "Element" + i + "=" + array[i] + "<br>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+</script>
+</html>

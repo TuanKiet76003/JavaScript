@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>  </title>
+</head>
+<body>
+<script>
+  let arry = [];
+  let index ;
+  let n = +prompt("Nhập số lượng phần tử trong mảng : ") ;
+  for (let i=0;i < n;i++){
+    arry[i] = + prompt('Nhập giá trị phần tử trong mảng :'+i);
+  }
+  let V = +prompt("Nhập giá trị V đã cho")
+  if (arry.includes(V)){
+    index = arry.indexOf(V);
+    arry.splice(index,1);
+    arry.push(0);
+    document.write(V + ' Giá trị có trong mảng' + '<br> '+'Mảng mới'+arry );
+  }else {
+    document.write('Giá trị không thuộc mảng vui lòng F5 và nhập lại ');
+  }
+</script>
+</body>
+</html>

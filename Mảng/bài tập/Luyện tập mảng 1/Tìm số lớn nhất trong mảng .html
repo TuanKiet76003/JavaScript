@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> tìm số lớn nhất trong mảng và hiển thị </title>
+</head>
+<body>
+<script>
+  let arry = [1,5,9,31,8,2,3,15,];
+  let max = arry[0];
+  let num = 0;
+  for (let i =0 ; i < arry.length ; i++){
+    if (arry[i]>=max){
+        max = arry[i];
+        num =i;
+    }
+  }
+  document.write('số lớn nhất là = ' + max +'<br>' + 'vị trí của phần tử là ' +  num);
+</script>
+</body>
+</html>

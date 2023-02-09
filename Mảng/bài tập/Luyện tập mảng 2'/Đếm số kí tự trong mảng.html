@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+</head>
+<body>
+<script>
+  let arry = [];
+   arry.length = +prompt("Nhập số lượng phần tử vào mảng");
+   let n = 0;
+  for (let i = 0 ; i < arry.length ; i++){
+    arry[i]= +prompt('Nhập phần tử thứ '+ i);
+    if (arry[i] % 1 === 0){
+        n ++;
+    }
+  }
+  document.write('Số kí tự trong mảng là =' + n );
+
+</script>
+</body>
+</html>

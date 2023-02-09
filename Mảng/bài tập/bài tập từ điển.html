@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Từ điển </title>
+</head>
+<body>
+<label> <input type="text" id="ngonngu" > </label>
+<label> <input type="button" value="Tra cứu" onclick="gg()"> </label>
+<br> <br>
+<!--<label> <input type="text" id="ngonngu2"> </label>-->
+<p id="ngonngu3"></p>
+
+<script>
+    let vn = ['táo', 'cam', 'quýt', 'bưởi', 'nhãn', 'xoài', 'mận'];
+    let Eng = ['apple', 'orange', 'mandarin', 'grapefruit', 'longan', 'mango', 'plum'];
+    function gg() {
+        let array = document.getElementById("ngonngu").value;
+        let a = vn.indexOf(array);
+        document.getElementById("ngonngu3").innerHTML = Eng[a]
+        // document.getElementById("ngonngu2").innerHTML = Eng[a]
+        // tại sao em dùng thêm một input và cho nó vào input đó in ra lại k được mà sao cho thẻ p là được anh nhỉ
+    }
+</script>
+</body>
+</html>

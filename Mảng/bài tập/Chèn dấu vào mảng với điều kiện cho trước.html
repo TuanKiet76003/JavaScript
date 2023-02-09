@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Chèn dấu vào mảng </title>
+</head>
+<body>
+<script>
+  let num = +window.prompt("Nhập dãy số bạn muốn ");
+  let numbers = num.toString();
+  let result = [numbers[0]]
+  for ( let i=0; i < numbers.length;i++ ){
+    if((numbers[i-1] % 2 === 0) && (numbers[i] % 2 === 0) ){
+      result.push("-",numbers[i]);
+    }else{
+      result.push(numbers[i]);
+    }
+  }
+  alert(result.join(''))
+</script>
+
+</body>
+</html>
