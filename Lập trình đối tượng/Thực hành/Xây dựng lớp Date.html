@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Xây dựng lớp date </title>
+</head>
+<body>
+<script>
+  class Date {
+    constructor(day, month, years) {
+      this.day = day;
+      this.month = month;
+      this.years = years;
+    }
+    getDay(){
+      return this.day;
+    }
+    getMonth(){
+        return this.month;
+    }
+    getYears(){
+        return this.years;
+    }
+    setDay(newDay){
+        this.day = newDay ;
+    }
+    setMonth(newMonth){
+        this.month = newMonth;
+    }
+    setYears(newYears){
+        this.years = newYears;
+    }
+    showInformation() {
+          return this.day + "/" + this.month + "/" + this.years + '<br>';
+    }
+  }
+  let resulyt = new Date(3,5,1999);
+  document.write(resulyt.getDay() + "/" + resulyt.getMonth() + "/" +  resulyt.getYears() + "<br>");
+  resulyt.setDay(prompt('Nhập ngày bạn muốn thay đổi'));
+    resulyt.setMonth(prompt('Nhập tháng bạn muốn thay đổi'));
+    resulyt.setYears(prompt('Nhập năm bạn muốn thay đổi'));
+    document.write(resulyt.showInformation());
+</script>
+</body>
+</html>

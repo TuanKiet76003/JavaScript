@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Phát triển chương trình kết nốt giữa công tắc và bóng đèn </title>
+</head>
+<body>
+<script>
+  class SwitchButton {
+    constructor(status,lamp) {
+      this.status = status;
+      this.lamp = lamp;
+    }
+    switchButton(){
+        return this.status;
+    }
+    connectToLamp(){
+        return this.lamp;
+    }
+    switchOff(){
+        return this.lamp;
+    }
+    switchOn(){
+        return this.lamp;
+    }
+  }
+  class EletricLamp extends SwitchButton {
+      constructor(status,lamp,statusEletric) {
+          super(status,lamp);
+          this.statusEletric = statusEletric;
+      }
+      turnOff(){
+          return this.switchOff();
+      }
+      turnOn(){
+          return this.switchOn();
+      }
+  }
+  let result = new EletricLamp('Bật','Sáng','trạng thái');
+  
+
+</script>
+</body>
+</html>

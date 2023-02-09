@@ -1,0 +1,114 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    table, th, td {
+      border: 1px solid silver;
+      width: 900px;
+      height: 50px;
+      border-collapse: collapse;
+      text-align: center;
+      font-family: Helvetica, Arial, sans-serif;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+    }
+
+    th {
+      background-color: #E98EAD;
+      color: white;
+    }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+  </style>
+</head>
+<body>
+<button type="button" onclick="add_Worker(); show_List_Workers()"> Thêm công nhân </button>
+
+<h1 style="color:#3A4F7A;font-family:Pacifico;"> Quản lí công nhân </h1>
+
+<div id='list_workers'></div>
+</body>
+<script>
+  class Workers {
+    contructor(id, name, birthday, address, salary, rank) {
+      this.id = id;
+      this.name = name;
+      this.birthday = birthday;
+      this.address = address;
+      this.salary = salary;
+      this.rank = rank;
+    }
+  }
+
+  let workers = [];
+
+  function show_List_Workers() {
+    let str = '<table>';
+    str += `
+            <tr>
+                <th> STT </th>
+                <th> Họ và tên </th>
+                <th> Ngày sinh </th>
+                <th> Địa chỉ </th>
+                <th> Lương </th>
+                <th> Chức vụ </th>
+            </tr>
+        `;
+
+    for (let i = 0; i < workers.length; i++) {
+      str += `
+                <tr>
+                    <td>
+                        ${workers[i].id}
+                    </td>
+                    <td>
+                        ${workers[i].name}
+                    </td>
+                    <td>
+                        ${workers[i].birthday}
+                    </td>
+                    <td>
+                        ${workers[i].address}
+                    </td>
+                    <td>
+                        ${workers[i].salary}
+                    </td>
+                    <td>
+                        ${workers[i].rank}
+                    </td>
+                </tr>
+            `;
+    }
+
+    str += '</table>';
+
+    document.getElementById('list_workers').innerHTML = str;
+  }
+
+  function add_Worker() {
+    let worker = new Workers();
+
+    const id = prompt("Nhập STT của công nhân");
+    worker.id = id;
+
+    const name = prompt("Nhập tên của công nhân");
+    worker.name = name;
+
+    const birthday = prompt("Nhập ngày sinh của công nhân");
+    worker.birthday = birthday;
+
+    const address = prompt("Nhập địa chỉ của công nhân");
+    worker.address = address;
+
+    const salary = prompt("Nhập lương của công nhân");
+    worker.salary = salary;
+
+    const rank = prompt("Nhập chức vụ của công nhân");
+    worker.rank = rank;
+
+    workers.push(worker);
+  }
+</script>
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Ứng dụng mô phỏng câu chuyện adam và eva </title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor(weight) {
+            this.weight = weight;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        setWeight(){
+            this.weight = this.weight - 1;
+        }
+        isEmpty(){
+            if (this.weight === 0){
+                return true;
+            }else {
+                return false;
+            }
+        }
+    }
+    class Human extends Apple{
+        constructor(name,gender,weightNG) {
+            super();
+            this.name = name;
+            this.gender = gender;
+            this.weightNG = weightNG;
+        }
+        getGender(){
+            return this.gender;
+        }
+        setGender(newGender){
+            this.gender = newGender;
+        }
+        checkApple(){
+          return this.isEmpty();
+        }
+        eat(){
+            this.setWeight();
+            this.weightNG = this.weightNG + 1;
+        }
+        say(a){
+            console.log(a);
+        }
+        getName(){
+            return this.name;
+        }
+        setName(newName){
+            this.name = newName
+        }
+        getWeightNG(){
+            return this.weightNG ;
+        }
+        setWeightNG(newWeightNG){
+            this.weightNG = newWeightNG;
+        }
+        showInformation(){
+            return  this.name + " " + this.gender + " " + this.weightNG ;
+    }
+    }
+    let resultApple = new Apple(10);
+    resultApple.getWeight();
+    let resultHuman = new Human('Adam','Nam',50);
+    resultHuman.getGender();
+    resultHuman.getName();
+    resultHuman.getWeightNG();
+    document.write(resultHuman.showInformation() + '<br>');
+    resultHuman.setName('Eva');
+    resultHuman.setGender('Nữ');
+    resultHuman.setWeightNG(40);
+    document.write(resultHuman.showInformation() + '<br>');
+    resultHuman.say('Tôi sẽ ăn một miếng táo');
+    resultHuman.checkApple();
+    resultHuman.eat();
+    document.write(resultHuman.showInformation());
+
+
+
+</script>
+</body>
+</html>

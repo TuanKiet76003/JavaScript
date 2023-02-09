@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Xây dựng lớp mô tả Temperature </title>
+</head>
+<body>
+<script>
+  class Temperature{
+    constructor(C) {
+      this.temperatureC = C;
+    }
+    getTemperatureF(){
+      return ((this.temperatureC*9/5) + 32 );
+    }
+    getKenvin(){
+        return (this.temperatureC +273.15);
+    }
+  }
+  let C = +prompt('Nhập nhiệt độ C muốn chuyển đổi');
+  let result = new Temperature(C)
+  document.write( 'Độ C bạn nhập vào và chuyển đổi qua độ F là : = ' + result.getTemperatureF() + '<sup>o</sup>C' + '<br>');
+  document.write( 'Độ C bạn nhập vào và chuyển đổi qua độ K là : = ' + result.getKenvin() + '<sup>o</sup>C');
+</script>
+
+</body>
+</html>
+
+<!--class Human{-->
+<!--constructor(name,gender,weightNG) {-->

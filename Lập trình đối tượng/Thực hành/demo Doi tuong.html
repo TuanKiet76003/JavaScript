@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 4</title>
+</head>
+<body>
+<h1 align="center">Worker Management</h1>
+<button onclick="addWorker()">Add Worker</button>
+<span id="result"></span>
+</body>
+<script>
+  class Worker {
+    constructor(number, fullname, birthdate, address, basesalary, position) {
+      this.number = number;
+      this.fullname = fullname;
+      this.birthdate = birthdate;
+      this.address = address;
+      this.basesalary = basesalary;
+      this.position = position;
+    }
+    setNumber(newNumber) {
+      this.number = newNumber;
+    }
+    setName(newName) {
+      this.fullname = newName;
+    }
+    setDate(newDate) {
+      this.birthdate = newDate;
+    }
+    setAddress(newAddress) {
+      this.address = newAddress;
+    }
+    setSalary(newSalary) {
+      this.basesalary = newSalary;
+    }
+    setPosition(newPosition) {
+      this.position = newPosition;
+    }
+  }
+
+  let workers = [];
+  function display() {
+    let tableWorker =
+            '<table border="1", cellspacing="0">' +
+            '<tr>' +
+            '<th width="150px">No</th> ' +
+            '<th width="400px">Fullname</th> ' +
+            '<th width="300px">Date of birth</th> ' +
+            '<th width="300px">Address</th> ' +
+            '<th width="300px">Salary</th> ' +
+            '<th width="300px">Position</th>' +
+            '</tr>';
+    for (let i = 0; i < workers.length; i++) {
+      tableWorker +=
+              '<tr>' +
+              '<td>' + workers[i].number + '</td>' +
+              '<td>' + workers[i].fullname + '</td>' +
+              '<td>' + workers[i].birthdate + '</td>' +
+              '<td>' + workers[i].address + '</td>' +
+              '<td>' + workers[i].basesalary + '</td>' +
+              '<td>' + workers[i].position + '</td>' +
+              '</tr>';
+    }
+    tableWorker += '</table>';
+    document.getElementById("result").innerHTML = tableWorker;
+  }
+  function addWorker() {
+    let worker = new Worker();
+    let inputNumber = +prompt ("Enter the no. of worker: ");
+    worker.setNumber(inputNumber);
+    let inputFullname = prompt ("Enter full name of worker: ");
+    worker.setName(inputFullname);
+    let inputDate = prompt("Enter birthdate of worker: ");
+    worker.setDate(inputDate);
+    let inputAddress = prompt("Enter address of worker: ");
+    worker.setAddress(inputAddress);
+    let inputSalary = prompt("Enter salary of worker: ");
+    worker.setSalary(inputSalary);
+    let inputPosition = prompt("Enter position of worker: ");
+    worker.setPosition(inputPosition);
+    workers.push(worker);
+    display();
+  }
+</script>
+</html>

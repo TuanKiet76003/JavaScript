@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Xây dựng mô tả hình chữ nhật </title>
+</head>
+<body>
+<canvas id="myCanvas" style="border:1px solid #d3d3d3;">
+</canvas>
+<script>
+  class  Rectangle {
+    constructor( length , width ) {
+      this.length = length;
+      this.width = width;
+    }
+    getArea(){
+      return(this.length * this.width);
+    }
+    getCircumference(){
+      return ((this.length + this.width)*2);
+    }
+  }
+  let dai = +prompt('Nhập chiều dài bạn muốn ');
+  let rong = +prompt('Nhập chiều rộng bạn muốn');
+  let result = new Rectangle(dai , rong);
+  document.write('Diện tích hình chữ nhật là :' + result.getArea() + '<br>');
+  document.write('Chu vi hình chữ nhật là :' + result.getCircumference());
+  let c = document.getElementById("myCanvas");
+  let ctx = c.getContext("2d");
+  ctx.fillRect(0,0,result.length , result.width);
+  ctx.stroke();
+</script>
+
+</body>
+</html>
+
