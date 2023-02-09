@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Chuyển đổi tiền tệ  </title>
+</head>
+<body>
+<table  style="width: 600px" >
+    <tr>
+        <th> Amount </th>
+        <th> From Currency </th>
+        <th> To Currency </th>
+    </tr>
+    <tr style="text-align: center">
+        <td>
+            <label> <input id="giatri1" type="text" name="Number">  </label>
+        </td>
+        <td>
+            <label>
+                <select id="giatri2">
+                    <option value="VN"> Việt Nam </option>
+                    <option value="USD"> American </option>
+                </select>
+            </label>
+        </td>
+        <td>
+            <label>
+                <select id="giatri3">
+                    <option value="VN"> VNĐ </option>
+                    <option value="USD"> USD </option>
+                </select>
+            </label>
+        </td>
+        <td>
+            <input type="button" onclick="Click()" value="Convert">
+
+        </td>
+    </tr>
+
+</table>
+<p> Result: <label id="giatri5"></label> </p>
+<script>
+    function Click() {
+        let Amo = document.getElementById("giatri1").value;
+        let from = document.getElementById("giatri2").value ;
+        let to = document.getElementById("giatri3").value ;
+        if (from === to){
+            document.getElementById("giatri5").innerText = Amo ;
+        } else if (from === "VN" && to === "USD") {
+            document.getElementById("giatri5").innerText = Amo/24000;
+        } else {
+            document.getElementById("giatri5").innerText  = Amo*24000;
+        }
+    }
+</script>
+</body>
+</html>

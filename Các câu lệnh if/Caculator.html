@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Ứng dụng phép tính đơn giản </title>
+</head>
+<body>
+        <table style=" width: 580px ; height: 60px">
+            <caption> Caculator  </caption>
+            <tr>
+                <td>
+                     <label> <input id="hang1" type="text" name="Number"> </label>
+                </td>
+                <td>
+                    <label> <input id="hang2" type="text" name="Number" ></label>
+                </td>
+            </tr>
+            <tr style="text-align: center">
+            <td>
+                <input id="phepcong" type="button" value="Addition(+)" onclick="Click('+')"  >
+                <input id="pheptru" type="button" value="Subtraction(-)" onclick="Click('-')" >
+                <input id="phepnhan" type="button" value="Multiplication(*)" onclick="Click('*')" >
+                <input id="phepchia" type="button" value="Division(/)" onclick="Click('/')" >
+            </td>
+            </tr>
+        </table>
+        <p> Result Divison : <label id="Kq"> </label> </p>
+
+<script>
+    function Click (operator) {
+        let a = +document.getElementById("hang1").value;
+        let b = +document.getElementById("hang2").value;
+        if (operator === "+") {
+            document.getElementById("Kq").innerHTML = a + b ;
+        }else if (operator === "-"){
+            document.getElementById("Kq").innerText = a - b  ;
+        }else if(operator === "*") {
+            document.getElementById("Kq").innerText = a * b;
+        }else {
+            document.getElementById("Kq").innerText = a / b  ;
+        }
+    }
+</script>
+
+</body>
+</html>

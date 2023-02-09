@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Bài tập câu lệnh switch-case </title>
+</head>
+<body>
+<label>
+    <input id="dulieu1" type="text" name="Number">
+    <input type="button" value="Tính số ngày " onclick="dosthing1()">
+</label>
+<p id="ngaythang1">  </p>
+<script>
+   function dosthing1() {
+        let abc = +document.getElementById("dulieu1").value;
+       switch(abc) {
+           case 1:
+           case 3:
+           case 5:
+           case 7:
+           case 8:
+           case 10:
+           case 12:
+               document.getElementById("ngaythang1").innerHTML = " Tháng " + abc + " có 31 ngày";
+               break;
+           case 4:
+           case 6:
+           case 9:
+           case 11:
+               document.getElementById("ngaythang1").innerHTML = "Tháng " + abc + " có 30 ngày";
+               break;
+           case 2:
+               document.getElementById("ngaythang1").innerHTML = "Tháng " + abc + " có 28 ngày hoặc 29 ngày ";
+               break;
+           default:
+               document.getElementById("ngaythang1").innerHTML =  "Nhập lại cho đúng số tháng";
+       }
+   }
+
+</script>
+</body>
+</html>
