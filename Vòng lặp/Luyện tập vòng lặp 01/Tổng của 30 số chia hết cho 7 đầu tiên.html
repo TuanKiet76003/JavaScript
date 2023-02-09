@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tổng của 30 số chia hết cho 7 đầu tiên </title>
+</head>
+<body>
+<script>
+ let n = 30;
+ let a = 0;
+ let b = 7;
+ let sum = 0;
+ while (a <= n) {
+   if (b%7===0){
+     document.write( b + "<br>");
+     sum = sum +b ;
+     a++;
+   }
+   b++;
+ }
+
+ document.write("sum= " + sum);
+</script>
+</body>
+</html>

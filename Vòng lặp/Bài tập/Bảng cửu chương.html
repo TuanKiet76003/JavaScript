@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Sinh bảng cửu chương </title>
+</head>
+<body>
+<script>
+
+  document.write( "<table border='1' cellspacing='0' cellpadding='3' width='500' >");
+  for (i=1;i<=10;i++){
+    document.write("<tr>");
+    for (j=2;j<=10;j++){
+      document.write("<td>" +i  * j+"=" + i + "x" + j +  "</td>")
+    }
+    document.write("</tr>");
+  }
+  document.write("</table>");
+</script>
+</body>
+</html>

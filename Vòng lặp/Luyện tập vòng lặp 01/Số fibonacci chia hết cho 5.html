@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>  số đầu tiên trong dãy fibonacci chia hết cho 5  </title>
+</head>
+<body>
+  <script>
+    const number = 30;
+    let a = 1 ;
+    let b = 1 ;
+    let c ;
+    let sum = 0;
+    for (i=1;i<= number; i++){
+      c = a + b;
+      a=b;
+      b=c;
+      sum = sum +a ;
+    }
+    document.write(" Tổng 20 Số đầu tiên trong dãy là a = " + sum + "<br>" );
+
+
+  </script>
+</body>
+</html>

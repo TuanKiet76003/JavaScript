@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Nâng cấp trò chơi </title>
+</head>
+<body>
+<h2>  Giao diện trò chơi</h2> <br>
+<label> <input type="button" value="Play Game " onclick="dosths()" >  <------- Click chuột để bắt đầu trò chơi   </label>
+<script>
+    function dosths(){
+        let a = Math.floor(Math.random() * 101);
+        let b = 0;
+        do {
+            let c = +prompt("Nhập số dự đoán từ 1-100");
+            if (a===c){
+                alert("Play to win")
+                break;
+            }else {
+                b++;
+                if ( a > c ){
+                    alert("số bạn nhập lớn hơn số đã dự định");
+                }
+                if ( a < c ){
+                    alert("Số bạn nhập nhỏ hơn số dự tính");
+                }
+                if ( b < 3 ){
+                    alert("Let try play again -.-");
+                }
+            }
+        }while (b < 3){
+            alert("Game over")
+        }
+
+    }
+</script>
+</body>
+</html>
