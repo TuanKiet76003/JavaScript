@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Task 3 - Bài 4:</h2>
+<div style="border: 1px;">
+    <h3>Danh mục nước giải khát</h3>
+    <input type="radio" name="drink" id="drink1" onclick="chooseDrink()"><label for="drink1">Cafe</label><br>
+    <input type="radio" name="drink" id="drink2" onclick="chooseDrink()"><label for="drink2">Cam vắt</label><br>
+    <input type="radio" name="drink" id="drink3" onclick="chooseDrink()"><label for="drink3">Nước ép cà rốt</label><br>
+    <input type="radio" name="drink" id="drink4" onclick="chooseDrink()"><label for="drink4">Nước ép cà chua</label><br>
+    <input type="radio" name="drink" id="drink5" onclick="chooseDrink()"><label for="drink5">Nước lọc</label><br>
+    <input type="radio" name="drink" id="drink6" onclick="chooseDrink()"><label for="drink6">Nước dừa</label><br>
+    <span id="price"></span><br><br>
+</div>
+
+<h3><label for="quantity">Số lượng</label></h3>
+<input type="number" id="quantity" style="width: 50px;">
+<div>
+    <h3>Thanh toán</h3>
+    <button type="button" onclick="displayMoney()">Thành tiền</button>
+    <span id="result_34"></span>
+</div>
+</div>
+<script>
+    let unitPrice = [15000, 20000, 25000, 22000, 10000, 30000];
+    let checkbox = document.getElementsByName("drink");
+
+    function chooseDrink()
+    {
+        let i = 0;
+        let index;
+
+        while (i < checkbox.length)
+        {
+            if (checkbox[i].checked)
+            {
+                index = i;
+                break;
+            }
+            i += 1;
+        }
+        document.getElementById("price").innerText = "Đơn giá: " + unitPrice[index];
+        let q = +document.getElementById("quantity").value;
+        return q * unitPrice[index];
+    }
+
+    function displayMoney()
+    {
+        document.getElementById("result_34").innerText = "Tổng giá trị: " + chooseDrink() + "VND";
+    }
+</script>
+</body>
+</html>
