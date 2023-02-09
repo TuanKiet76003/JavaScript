@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> xem kí tự  </title>
+</head>
+<body>
+<label>
+  <input id="Input" type="text">
+</label>
+<label>
+  <input id="kiemtra" type="button" value="Check" onclick="dosth()" >
+</label>
+<p id="result" > </p>
+<script>
+    function isIf(Characters){
+        if (Characters === Number(Characters) ) {
+            return true ;
+        }else {
+            return false;
+        }
+    }
+    function dosth(){
+        let output = document.getElementById('Input').value;
+        let A = isIf(output);
+        document.getElementById('result').innerHTML = '' +  A;
+    }
+
+
+</script>
+</body>
+</html>

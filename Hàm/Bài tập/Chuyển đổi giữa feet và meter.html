@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title> Chuyển đổi giữa feet và meter  </title>
+</head>
+<body>
+ <div>
+     <table style="width: 50%">
+         <tr>
+             <th> Feet </th>
+             <th> Meter </th>
+             <th> Meter </th>
+             <th> Feet </th>
+         </tr>
+         <tr>
+
+             <td>
+                 <label>
+                     <input id="hang1" type="number" oninput="check()">
+                 </label>
+             </td>
+             <td> <p id="result" > </p>   </td>
+             <td>
+                 <label>
+                     <input id="hang2" type="number" oninput="check2()">
+                 </label>
+             </td>
+             <td>  <p id="result2" > </p>    </td>
+         </tr>
+
+     </table>
+ </div>
+</body>
+<script>
+    function feetToMeter(numbers){
+        return 0.305 * numbers;
+    }
+    function meterTOFeet(numbers2){
+        return 3.279 * numbers2;
+    }
+    function check(){
+        let input = document.getElementById('hang1').value;
+        document.getElementById('result').innerHTML = feetToMeter(input);
+    }
+    function check2(){
+        let input2 = document.getElementById('hang2').value;
+        document.getElementById('result2').innerHTML = meterTOFeet(input2);
+    }
+</script>
+</html>

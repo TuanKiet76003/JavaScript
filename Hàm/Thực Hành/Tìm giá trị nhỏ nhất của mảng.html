@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tìm giá trị nhỏ nhất của mảng </title>
+</head>
+<body>
+<script>
+   let arr1 = [3, 5, 1, 8, -3, 7, 8];
+
+   let arr2 = [7, 12, 6, 9, 20, 56, 89] ;
+
+   let arr3 = [];
+
+   let  arr4 = [0, 0, 0, 0, 0, 0];
+   function minArry(ary){
+    let min = ary[0];
+    for( let i=1;i<ary.length;i++){
+        if (ary[i] < min ){
+            min =ary[i];
+        }
+    }
+    return min;
+   }
+   let min1 = minArry(arr1);
+   document.write('Mảng 1 có giá trị min là = ' + min1 + '<br>');
+   let min2 = minArry(arr2);
+   document.write('Mảng 2 có giá trị min là = ' + min2 + '<br>');
+   let min3 = minArry(arr3);
+   document.write('Mảng 3 có giá trị min là = ' + min3 + '<br>');
+   let min4 = minArry(arr4);
+   document.write('Mảng 4 có giá trị min là = ' + min4 + '<br>');
+</script>
+
+</body>
+</html>

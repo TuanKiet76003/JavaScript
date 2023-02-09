@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function arryNumber(){
+    let arry = [];
+    let n = +prompt('Nhập số lượng phần tử mảng');
+    let characters = +prompt('Nhập một kí tự bất kì');
+    let count = 0 ;
+    for (let i = 0;i < n;i++ ) {
+        arry[i]= +prompt('Nhập phần tử  ' + i + 'của mảng  ' );
+        if (characters === arry[i]) {
+            count++;
+        }
+    }if (count>0){
+        document.write("Số lần xuất hiện kí tự trong mảng là = " + count );
+
+      }else {
+        document.write("-1");
+      }
+  }
+  arryNumber()
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Bài tập 5 luyện tập 1 </title>
+</head>
+<body>
+<script>
+  let aray1 = [ "Polaris" , 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus'];
+  let aray2 = [ 'Ursa Minor', 'Tarurus', 'Cygnu','Lyra', 'Aquila', 'Ursa Major' , 'Leo' ];
+  function string(num1){
+      for (let i = 0 ; i < aray1.length;i++) {
+              if (num1 === aray1[i]){
+                  return aray2[i];
+              }
+          }
+      }
+    let aray = prompt('Nhập tên ngôi sao muốn tìm');
+    let result = string(aray);
+    if (string(aray)){
+        document.write(result + 'là chòm sao của ngôi sao mà bạn muốn tìm');
+    }else {
+        document.write('Không có chòm sao nào tương ứng vui lòng f5 để nhập lại')
+    }
+</script>
+</body>
+</html>

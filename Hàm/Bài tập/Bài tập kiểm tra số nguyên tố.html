@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Kiểm tra số nguyên tố  </title>
+</head>
+<body>
+<label>
+  <input id="giatri" type="number" placeholder="Nhập số bất kì ">
+  <input type="button" value="Test" onclick="check()">
+</label>
+<p id="result">  </p>
+</body>
+<script>
+  function check(n){
+     if(n>1){
+         let num = 0;
+         for (let i=1;i<=n;i++){
+             if (n % i === 0){
+                 num++;
+         }
+     }
+         return num === 2 ;
+         // return n++;
+     }
+     let number = document.getElementById('giatri').value;
+     if (check(number)){
+        document.write(number + "Là một số nguyên tố");
+     }else {
+         document.write(number + " Không phải là một số nguyên tố ");
+     }
+
+  }
+</script>
+</html>

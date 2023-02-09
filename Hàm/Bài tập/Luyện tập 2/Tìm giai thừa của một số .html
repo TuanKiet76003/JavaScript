@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function dosth(number){
+    if (number === 2){
+        return 2;
+    }
+    return number * dosth(number -1);
+
+}
+ let result = dosth(+prompt('Nhập số nguyên bạn muốn chuyển đổi '));
+ document.write('Giai thừa bạn muốn tìm là :'+ result);
+</script>
+</body>
+</html>
