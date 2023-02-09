@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Luyện tập cấu trúc điều kiện  </title>
+</head>
+<body>
+    <script>
+      let a = +prompt(" Nhập cạnh thứ nhất");
+      let b = +prompt(" Nhập cạnh thứ hai");
+      let c = +prompt("Nhập cạnh thứ ba");
+      if ((a && b && c) > 0 && (a + b) > c && (b + c) > a && (a + c) > b){
+            document.write("Ba cạnh của tam giác là = " + a +"," +b + "và" +c );
+      }else {
+          document.write(a + "," +b + "," +c + "Không phải là ba cạnh của tam giác");
+      }
+    </script>
+</body>
+</html>

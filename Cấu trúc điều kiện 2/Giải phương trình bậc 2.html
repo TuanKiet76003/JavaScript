@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Luyện tập cấu trúc điều kiện </title>
+</head>
+<body>
+<h2> Giải phương trình bậc 2 </h2>
+<p> Nhập các tham số của phương trình ax <sup> 2  </sup>  + bx + c = 0 </p>
+<label> a = <input id="giatri1" type="text"> </label>
+<br> <br>
+<label> b = <input id="giatri2" type="text"></label>
+<br> <br>
+<label> c = <input id="giatri3" type="text"></label>
+<br> <br>
+<input type="submit" value="Kết quả" onclick="PTB2()">
+
+<script>
+    function PTB2 (){
+        let a = document.getElementById("giatri1").value;
+        let b = document.getElementById("giatri2").value;
+        let c = document.getElementById("giatri3").value;
+        let delta = (b*b)-(4*a*c) ;
+        let x1 = (-b + delta * delta ) /2*a ;
+        let x2 = (-b - delta * delta ) /2*a ;
+        let x3 = -b / (2*a)  ;
+        if(delta < 0 ) {
+            document.write(" Phương trình vô nghiệm ");
+        }else if (delta === 0) {
+            document.write("Phương trình có nghiệm x1=x2 = " +x3 ) ;
+        }else {
+            document.write("Phương trình có nghiệm x1 =" +x1);
+            document.write("Phương trình có nghiệm x2 =" +x2);
+        }
+    }
+
+</script>
+</body>
+</html>

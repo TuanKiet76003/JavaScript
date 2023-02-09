@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Luyện tập cấu trúc điều kiện </title>
+</head>
+<body>
+<h2> Giải phương trình bậc nhất  </h2>
+<label>  Nhập các tham số của phương trình ax + b = 0 </label>
+<br>
+<br>
+<label> a = <input id="giatri1" type="text" name="Number" > </label>
+<br> <br>
+<label> b = <input id="giatri2" type="text" name="Number" > </label>
+<br> <br>
+<label> <input type="submit" value="Kết quả" onclick="dosth()"> </label>
+<script>
+    function dosth() {
+        let a = document.getElementById("giatri1").value;
+        let b = document.getElementById("giatri2").value;
+        let X = -b/a
+        if ( a===0 && b===0 ){
+            document.write(" Phương trình vô số nghiệm : ");
+        }else if (a===0 && b > 0 || b < 0 ){
+            document.write("Phương trình vô nghiệm :");
+        }else {
+            document.write("Phương trình có một nghiệm duy nhất X =" + X);
+        }
+    }
+</script>
+</body>
+</html>

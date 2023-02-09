@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Luyện tập cấu trúc điều kiện </title>
+</head>
+<body>
+    <label> <input style="width: 300px" id="giatri1" type="text" name="Number" placeholder="Nhập số lương tháng (Đơn vị triệu ) "> </label>
+    <label> <input type="submit" value="số tiền thuế " onclick="thue()"> </label> <br> <br>
+    <label id="tienthue" > Số tiền phải trả là :</label>
+
+<script>
+    function thue(){
+        let a = document.getElementById("giatri1").value;
+        if (a === 5) {
+            document.getElementById("tienthue").innerHTML = a*5/100 ;
+        }else if (a>5 && a<=10){
+            document.getElementById("tienthue").innerHTML = a*10/100 ;
+        }else if (a>10 && a <=18){
+            document.getElementById("tienthue").innerHTML = a*15/100 ;
+        }else if (a>18 && a<=32){
+            document.getElementById("tienthue").innerHTML = a*20/100 ;
+        }else if (a>32 && a <=52){
+            document.getElementById("tienthue").innerHTML = a*25/100 ;
+        }else if (a>52 && a <=80){
+            document.getElementById("tienthue").innerHTML = a*30/100 ;
+        }else {
+            document.getElementById("tienthue").innerHTML = a*35/100 ;
+        }
+    }
+</script>
+</body>
+</html>

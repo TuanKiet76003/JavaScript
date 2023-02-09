@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Luyện tập cấu trúc điều kiện </title>
+</head>
+<body>
+<label> <input id="giatri1" type="text" name="Number" placeholder="Nhập số điện tháng vừa rồi">  </label>
+<input type="submit" value="Kiểm tra" onclick="Tieuthu()">
+<br> <br>
+<label id="tiendien"> Số tiền điện sử dụng là : </label>
+<script>
+    function Tieuthu(){
+        let a = document.getElementById("giatri1").value;
+        if (a<=50){
+            document.getElementById("tiendien").innerHTML = a * 1678 ;
+        }else if (a<=100){
+            document.getElementById("tiendien").innerHTML = a * 1734 ;
+        }else if(a>100 && a<= 200){
+            document.getElementById("tiendien").innerHTML = a * 2014 ;
+        }else if (a>200 && a <= 300){
+            document.getElementById("tiendien").innerHTML = a * 2536 ;
+        }else if (a>300 && a <= 400){
+            document.getElementById("tiendien").innerHTML = a * 2834 ;
+        }else {
+            document.getElementById("tiendien").innerHTML = a * 2927 ;
+        }
+    }
+</script>
+</body>
+</html>

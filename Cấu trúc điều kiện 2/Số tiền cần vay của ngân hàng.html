@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Luyện tập cấu trúc điều kiện </title>
+</head>
+<body>
+<label> <input id="giatri1" type="text" name="Number" placeholder="Nhập số tiền (đơn vị triệu ) ">  </label>
+<br> <br>
+<label> <input id="giatri2" type="text" name="Number" placeholder="Số tháng cần vay "> </label>
+<br> <br>
+<label> <input type="submit" value="Kiểm tra" onclick="laisuat()"> </label>
+<p id="tien" > số tiền cần trả  </p>
+<script>
+    function laisuat(){
+        let a = document.getElementById("giatri1").value;
+        let b = document.getElementById("giatri2").value;
+        if (a <=100 ) {
+            document.getElementById("tien").innerHTML= (a*(12/100)/b) ;
+        }else if(a>100 && a<= 200){
+            document.getElementById("tien").innerHTML= (a*(15/100)/b) ;
+        }else if(a>200 && a<=300){
+            document.getElementById("tien").innerHTML= (a*(20/100)/b) ;
+        }else if (a>300 && a <=500 ) {
+            document.getElementById("tien").innerHTML= (a*(25/100)/b) ;
+        }else {
+            document.getElementById("tien").innerHTML= (a*(30/100)/b) ;
+        }
+
+    }
+</script>
+</body>
+</html>
